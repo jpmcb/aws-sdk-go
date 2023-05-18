@@ -47,6 +47,11 @@ const (
 	UsWest2RegionID      = "us-west-2"      // US West (Oregon).
 )
 
+// AWS in-build region
+const (
+	IlCentral1RegionID = "il-central-1" // US West (Oregon).
+)
+
 // AWS China partition's regions.
 const (
 	CnNorth1RegionID     = "cn-north-1"     // China (Beijing).
@@ -84,10 +89,10 @@ func DefaultResolver() Resolver {
 // DefaultPartitions returns a list of the partitions the SDK is bundled
 // with. The available partitions are: AWS Standard, AWS China, AWS GovCloud (US), AWS ISO (US), AWS ISOB (US), and AWS ISOE (Europe).
 //
-//    partitions := endpoints.DefaultPartitions
-//    for _, p := range partitions {
-//        // ... inspect partitions
-//    }
+//	partitions := endpoints.DefaultPartitions
+//	for _, p := range partitions {
+//	    // ... inspect partitions
+//	}
 func DefaultPartitions() []Partition {
 	return defaultPartitions.Partitions()
 }
@@ -181,6 +186,9 @@ var awsPartition = partition{
 		"ap-southeast-4": region{
 			Description: "Asia Pacific (Melbourne)",
 		},
+		"il-central-1": region{
+			Description: "TLV",
+		},
 		"ca-central-1": region{
 			Description: "Canada (Central)",
 		},
@@ -272,6 +280,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -448,6 +459,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -611,6 +625,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -1139,6 +1156,14 @@ var awsPartition = partition{
 					},
 				},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{
+					Hostname: "api.ecr.il-central-1.amazonaws.com",
+					CredentialScope: credentialScope{
+						Region: "il-central-1",
+					},
+				},
+				endpointKey{
 					Region: "ap-east-1",
 				}: endpoint{
 					Hostname: "api.ecr.ap-east-1.amazonaws.com",
@@ -1216,6 +1241,14 @@ var awsPartition = partition{
 					Hostname: "api.ecr.ap-southeast-4.amazonaws.com",
 					CredentialScope: credentialScope{
 						Region: "ap-southeast-4",
+					},
+				},
+				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{
+					Hostname: "api.ecr.il-central-1.amazonaws.com",
+					CredentialScope: credentialScope{
+						Region: "il-central-1",
 					},
 				},
 				endpointKey{
@@ -2162,6 +2195,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -2356,6 +2392,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -2439,6 +2478,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -2581,6 +2623,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -3341,6 +3386,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -3733,6 +3781,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -3891,6 +3942,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -4533,6 +4587,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -4722,6 +4779,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -5006,6 +5066,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -5577,6 +5640,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -6641,6 +6707,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -7875,6 +7944,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -8042,6 +8114,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -8125,6 +8200,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -8485,6 +8563,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -8648,6 +8729,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -8819,6 +8903,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -8988,6 +9075,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -9180,6 +9270,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -9358,6 +9451,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -9501,6 +9597,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -9847,10 +9946,19 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region:  "ap-southeast-4",
 					Variant: fipsVariant,
 				}: endpoint{
 					Hostname: "elasticfilesystem-fips.ap-southeast-4.amazonaws.com",
+				},
+				endpointKey{
+					Region:  "il-central-1",
+					Variant: fipsVariant,
+				}: endpoint{
+					Hostname: "elasticfilesystem-fips.il-central-1.amazonaws.com",
 				},
 				endpointKey{
 					Region: "ca-central-1",
@@ -10029,6 +10137,15 @@ var awsPartition = partition{
 					Hostname: "elasticfilesystem-fips.ap-southeast-4.amazonaws.com",
 					CredentialScope: credentialScope{
 						Region: "ap-southeast-4",
+					},
+					Deprecated: boxedTrue,
+				},
+				endpointKey{
+					Region: "fips-il-central-1",
+				}: endpoint{
+					Hostname: "elasticfilesystem-fips.il-central-1.amazonaws.com",
+					CredentialScope: credentialScope{
+						Region: "il-central-1",
 					},
 					Deprecated: boxedTrue,
 				},
@@ -10282,6 +10399,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -10431,6 +10551,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -11003,6 +11126,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -11155,6 +11281,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -11387,6 +11516,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -13066,6 +13198,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -15050,6 +15185,11 @@ var awsPartition = partition{
 					Hostname: "kendra-ranking.ap-southeast-4.api.aws",
 				},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{
+					Hostname: "kendra-ranking.il-central-1.api.aws",
+				},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{
 					Hostname: "kendra-ranking.ca-central-1.api.aws",
@@ -15155,6 +15295,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -15300,6 +15443,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -15609,6 +15755,24 @@ var awsPartition = partition{
 					Hostname: "kms-fips.ap-southeast-4.amazonaws.com",
 					CredentialScope: credentialScope{
 						Region: "ap-southeast-4",
+					},
+					Deprecated: boxedTrue,
+				},
+				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
+					Region:  "il-central-1",
+					Variant: fipsVariant,
+				}: endpoint{
+					Hostname: "kms-fips.il-central-1.amazonaws.com",
+				},
+				endpointKey{
+					Region: "il-central-1-fips",
+				}: endpoint{
+					Hostname: "kms-fips.il-central-1.amazonaws.com",
+					CredentialScope: credentialScope{
+						Region: "il-central-1",
 					},
 					Deprecated: boxedTrue,
 				},
@@ -16151,6 +16315,15 @@ var awsPartition = partition{
 					Hostname: "lambda.ap-southeast-4.api.aws",
 				},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
+					Region:  "il-central-1",
+					Variant: dualStackVariant,
+				}: endpoint{
+					Hostname: "lambda.il-central-1.api.aws",
+				},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -16522,6 +16695,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -16838,6 +17014,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -17951,6 +18130,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -18034,6 +18216,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -18446,6 +18631,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -19069,6 +19257,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -19814,6 +20005,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -20704,6 +20898,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -20864,6 +21061,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -21022,6 +21222,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -21426,6 +21629,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -21972,6 +22178,11 @@ var awsPartition = partition{
 					Hostname: "resource-explorer-2.ap-southeast-4.api.aws",
 				},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{
+					Hostname: "resource-explorer-2.il-central-1.api.aws",
+				},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{
 					Hostname: "resource-explorer-2.ca-central-1.api.aws",
@@ -22067,6 +22278,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -22363,6 +22577,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -22844,6 +23061,15 @@ var awsPartition = partition{
 					Variant: dualStackVariant,
 				}: endpoint{
 					Hostname: "s3.dualstack.ap-southeast-4.amazonaws.com",
+				},
+				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
+					Region:  "il-central-1",
+					Variant: dualStackVariant,
+				}: endpoint{
+					Hostname: "s3.dualstack.il-central-1.amazonaws.com",
 				},
 				endpointKey{
 					Region: "aws-global",
@@ -23816,6 +24042,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -23990,6 +24219,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -24427,6 +24659,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -24786,6 +25021,15 @@ var awsPartition = partition{
 					Hostname: "servicediscovery.ap-southeast-4.amazonaws.com",
 				},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
+					Region:  "il-central-1",
+					Variant: dualStackVariant,
+				}: endpoint{
+					Hostname: "servicediscovery.il-central-1.amazonaws.com",
+				},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -25072,6 +25316,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -25949,6 +26196,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -26100,6 +26350,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -26246,6 +26499,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -26675,6 +26931,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -26818,6 +27077,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -26997,6 +27259,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -27090,6 +27355,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "aws-global",
@@ -27271,6 +27539,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -27416,6 +27687,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-4",
 				}: endpoint{},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -27559,6 +27833,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
@@ -28693,6 +28970,23 @@ var awsPartition = partition{
 					},
 				},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{
+					Hostname: "waf-regional.il-central-1.amazonaws.com",
+					CredentialScope: credentialScope{
+						Region: "il-central-1",
+					},
+				},
+				endpointKey{
+					Region:  "il-central-1",
+					Variant: fipsVariant,
+				}: endpoint{
+					Hostname: "waf-regional-fips.il-central-1.amazonaws.com",
+					CredentialScope: credentialScope{
+						Region: "il-central-1",
+					},
+				},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{
 					Hostname: "waf-regional.ca-central-1.amazonaws.com",
@@ -28941,6 +29235,15 @@ var awsPartition = partition{
 					Hostname: "waf-regional-fips.ap-southeast-4.amazonaws.com",
 					CredentialScope: credentialScope{
 						Region: "ap-southeast-4",
+					},
+					Deprecated: boxedTrue,
+				},
+				endpointKey{
+					Region: "fips-il-central-1",
+				}: endpoint{
+					Hostname: "waf-regional-fips.il-central-1.amazonaws.com",
+					CredentialScope: credentialScope{
+						Region: "il-central-1",
 					},
 					Deprecated: boxedTrue,
 				},
@@ -29407,6 +29710,23 @@ var awsPartition = partition{
 					},
 				},
 				endpointKey{
+					Region: "il-central-1",
+				}: endpoint{
+					Hostname: "wafv2.il-central-1.amazonaws.com",
+					CredentialScope: credentialScope{
+						Region: "il-central-1",
+					},
+				},
+				endpointKey{
+					Region:  "il-central-1",
+					Variant: fipsVariant,
+				}: endpoint{
+					Hostname: "wafv2-fips.il-central-1.amazonaws.com",
+					CredentialScope: credentialScope{
+						Region: "il-central-1",
+					},
+				},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{
 					Hostname: "wafv2.ca-central-1.amazonaws.com",
@@ -29655,6 +29975,15 @@ var awsPartition = partition{
 					Hostname: "wafv2-fips.ap-southeast-4.amazonaws.com",
 					CredentialScope: credentialScope{
 						Region: "ap-southeast-4",
+					},
+					Deprecated: boxedTrue,
+				},
+				endpointKey{
+					Region: "fips-il-central-1",
+				}: endpoint{
+					Hostname: "wafv2-fips.il-central-1.amazonaws.com",
+					CredentialScope: credentialScope{
+						Region: "il-central-1",
 					},
 					Deprecated: boxedTrue,
 				},
@@ -30260,6 +30589,9 @@ var awsPartition = partition{
 				}: endpoint{},
 				endpointKey{
 					Region: "ap-southeast-4",
+				}: endpoint{},
+				endpointKey{
+					Region: "il-central-1",
 				}: endpoint{},
 				endpointKey{
 					Region: "ca-central-1",
